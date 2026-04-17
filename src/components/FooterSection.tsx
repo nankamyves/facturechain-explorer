@@ -11,7 +11,7 @@ const FooterSection = () => (
             <span className="text-lg font-bold text-foreground">FactureChain</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            La transparence énergétique par la blockchain. Contribuer aux ODD 7 (Énergie propre) et ODD 11 (Villes durables).
+            La transparence énergétique par la blockchain. Contribuer aux ODD 7 (Énergie propre), ODD 11 (Villes durables) et ODD 16 (Institutions efficaces).
           </p>
         </div>
 
