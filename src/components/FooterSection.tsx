@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Zap } from "lucide-react";
+import Logo from "./Logo";
 
 const FooterSection = () => {
   const { t } = useTranslation();
@@ -9,7 +9,7 @@ const FooterSection = () => {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <Zap className="h-5 w-5 text-secondary" />
+              <Logo className="h-7 w-7" />
               <span className="text-lg font-bold text-foreground">FactureChain</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">{t("footer.tagline")}</p>
