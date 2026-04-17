@@ -6,6 +6,7 @@ const links = [
   { href: "#probleme", label: "Le Problème" },
   { href: "#solution", label: "La Solution" },
   { href: "#dashboard", label: "Dashboard" },
+  { href: "#odd", label: "Impact ODD" },
 ];
 
 const Navbar = () => {
