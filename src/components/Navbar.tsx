@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
-
-const links = [
-  { href: "#probleme", label: "Le Problème" },
-  { href: "#solution", label: "La Solution" },
-  { href: "#dashboard", label: "Dashboard" },
-  { href: "#odd", label: "Impact ODD" },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+
+  const links = [
+    { href: "#probleme", label: t("nav.problem") },
+    { href: "#solution", label: t("nav.solution") },
+    { href: "#dashboard", label: t("nav.dashboard") },
+    { href: "#odd", label: t("nav.sdg") },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
@@ -28,14 +31,18 @@ const Navbar = () => {
             </a>
           ))}
           <a href="#solution" className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5">
-            Commencer
+            {t("nav.cta")}
           </a>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile toggle */}
-        <button className="sm:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 sm:hidden">
+          <LanguageSwitcher />
+          <button className="text-foreground" onClick={() => setOpen(!open)}>
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
