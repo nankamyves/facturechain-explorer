@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-background" />
       </div>
 
-      {/* Animated grid overlay */}
       <div className="absolute inset-0 opacity-10">
         <div
           className="w-full h-full"
@@ -28,7 +28,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="inline-block mb-6 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary-foreground backdrop-blur-sm">
-            🔗 Propulsé par la Blockchain
+            {t("hero.badge")}
           </span>
         </motion.div>
 
@@ -39,9 +39,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           style={{ color: "white" }}
         >
-          Reprenez le contrôle de votre{" "}
-          <span className="text-gradient">facture d'électricité</span>{" "}
-          avec FactureChain
+          {t("hero.title_1")} <span className="text-gradient">{t("hero.title_highlight")}</span> {t("hero.title_2")}
         </motion.h1>
 
         <motion.p
@@ -51,8 +49,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Un historique immuable et transparent de votre consommation, garanti par la blockchain.
-          Contestez les surfacturations avec des preuves vérifiables.
+          {t("hero.subtitle")}
         </motion.p>
 
         <motion.div
@@ -61,22 +58,15 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
         >
-          <a
-            href="#solution"
-            className="rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
-          >
-            Découvrir la solution
+          <a href="#solution" className="rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5">
+            {t("hero.cta_primary")}
           </a>
-          <a
-            href="#dashboard"
-            className="rounded-lg bg-secondary px-8 py-3.5 text-base font-semibold text-secondary-foreground shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
-          >
-            Voir une démo
+          <a href="#dashboard" className="rounded-lg bg-secondary px-8 py-3.5 text-base font-semibold text-secondary-foreground shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5">
+            {t("hero.cta_secondary")}
           </a>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
