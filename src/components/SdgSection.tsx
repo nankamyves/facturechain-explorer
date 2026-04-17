@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Zap, Building2, Scale } from "lucide-react";
+import sdg7 from "@/assets/sdg/sdg7.jpg";
+import sdg11 from "@/assets/sdg/sdg11.jpg";
+import sdg16 from "@/assets/sdg/sdg16.jpg";
 
 const SdgSection = () => {
   const { t } = useTranslation();
@@ -9,24 +11,21 @@ const SdgSection = () => {
       number: 7,
       title: t("sdg.sdg7_title"),
       description: t("sdg.sdg7_desc"),
-      icon: Zap,
-      color: "hsl(48 95% 55%)",
-      accent: "bg-yellow-500/10 text-yellow-600",
+      logo: sdg7,
+      accent: "bg-yellow-500/10 text-yellow-700",
     },
     {
       number: 11,
       title: t("sdg.sdg11_title"),
       description: t("sdg.sdg11_desc"),
-      icon: Building2,
-      color: "hsl(35 90% 55%)",
-      accent: "bg-orange-500/10 text-orange-600",
+      logo: sdg11,
+      accent: "bg-orange-500/10 text-orange-700",
     },
     {
       number: 16,
       title: t("sdg.sdg16_title"),
       description: t("sdg.sdg16_desc"),
-      icon: Scale,
-      color: "hsl(215 75% 45%)",
+      logo: sdg16,
       accent: "bg-primary/10 text-primary",
     },
   ];
@@ -56,17 +55,13 @@ const SdgSection = () => {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
             >
-              <div
-                className="flex items-center justify-between rounded-xl p-5 text-white shadow-lg"
-                style={{ backgroundColor: sdg.color }}
-              >
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-wider opacity-90">{t("sdg.odd")}</div>
-                  <div className="text-5xl font-extrabold leading-none">{sdg.number}</div>
-                </div>
-                <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                  <sdg.icon className="h-9 w-9" strokeWidth={2.2} />
-                </div>
+              <div className="flex justify-center">
+                <img
+                  src={sdg.logo}
+                  alt={`${t("sdg.odd")} ${sdg.number} — ${sdg.title}`}
+                  loading="lazy"
+                  className="h-40 w-40 rounded-xl object-cover shadow-lg transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
 
               <h3 className="mt-6 text-lg font-bold text-foreground">{sdg.title}</h3>
