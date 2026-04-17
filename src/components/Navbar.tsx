@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between px-4">
         <a href="#" className="flex items-center gap-2 font-bold text-lg text-foreground">
-          <Zap className="h-5 w-5 text-secondary" />
+          <Logo className="h-7 w-7" />
           FactureChain
         </a>
 
