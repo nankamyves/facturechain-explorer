@@ -23,21 +23,21 @@ const Navbar = () => {
           FactureChain
         </a>
 
-        {/* Desktop */}
-        <div className="hidden sm:flex items-center gap-6">
+        {/* Desktop / Tablet */}
+        <div className="hidden md:flex items-center gap-4 lg:gap-6">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
               {l.label}
             </a>
           ))}
-          <a href="#solution" className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5">
+          <a href="#solution" className="hidden lg:inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5">
             {t("nav.cta")}
           </a>
           <LanguageSwitcher />
         </div>
 
         {/* Mobile toggle */}
-        <div className="flex items-center gap-2 sm:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher />
           <button className="text-foreground" onClick={() => setOpen(!open)}>
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
