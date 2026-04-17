@@ -49,7 +49,7 @@ const Navbar = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="sm:hidden border-t border-border bg-background px-4 py-4 space-y-3"
+            className="md:hidden border-t border-border bg-background px-4 py-4 space-y-3"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
