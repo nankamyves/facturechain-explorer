@@ -3,9 +3,7 @@ export const fr = {
     problem: "Le Problème",
     solution: "La Solution",
     blockchain: "Blockchain",
-    dashboard: "Dashboard",
     sdg: "Impact ODD",
-    cta: "Commencer",
   },
   hero: {
     badge: "🔗 Propulsé par la Blockchain",
@@ -15,7 +13,6 @@ export const fr = {
     subtitle:
       "Un historique immuable et transparent de votre consommation, garanti par la blockchain. Contestez les surfacturations avec des preuves vérifiables.",
     cta_primary: "Découvrir la solution",
-    cta_secondary: "Voir une démo",
   },
   problem: {
     eyebrow: "Le Problème",
@@ -96,19 +93,6 @@ export const fr = {
     why_s4: "Réclamation en 1 clic, suivi public horodaté — cible < 30 jours",
     why_p5: "62 % des abonnés abandonnent par découragement",
     why_s5: "Interface mobile simple, pas de déplacement en agence — cible > 80 %",
-  },
-  dashboard: {
-    eyebrow: "Aperçu",
-    title: "Dashboard Abonné",
-    subtitle: "Visualisez votre consommation réelle face à ce qui vous est facturé.",
-    topbar: "FactureChain — Tableau de bord",
-    subscriber: "Abonné #237-00412",
-    chart_title: "Consommation vs Facturation (kWh)",
-    legend_real: "Consommation réelle",
-    legend_billed: "Montant facturé",
-    report: "Signaler une anomalie",
-    history: "Historique récent",
-    gap: "⚠ Écart",
   },
   sdg: {
     eyebrow: "Notre Impact",
