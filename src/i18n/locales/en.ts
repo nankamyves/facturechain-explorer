@@ -133,6 +133,6 @@ export const en = {
     user2: "Consumer associations",
     user3: "SMEs & Businesses",
     rights: "© 2026 FactureChain. All rights reserved.",
-    badge: "🏆 Miabe Hackathon 2026 — Darollo Technologies Corporation",
+    badge: "Miabe Hackathon 2026 — Darollo Technologies Corporation",
   },
 };
