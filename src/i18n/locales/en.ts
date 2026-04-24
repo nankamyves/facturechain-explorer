@@ -3,9 +3,7 @@ export const en = {
     problem: "The Problem",
     solution: "The Solution",
     blockchain: "Blockchain",
-    dashboard: "Dashboard",
     sdg: "SDG Impact",
-    cta: "Get Started",
   },
   hero: {
     badge: "🔗 Powered by Blockchain",
@@ -15,7 +13,6 @@ export const en = {
     subtitle:
       "An immutable and transparent record of your consumption, secured by blockchain. Challenge overbilling with verifiable proof.",
     cta_primary: "Discover the solution",
-    cta_secondary: "See a demo",
   },
   problem: {
     eyebrow: "The Problem",
@@ -97,19 +94,6 @@ export const en = {
     why_p5: "62% of subscribers give up out of discouragement",
     why_s5: "Simple mobile interface, no agency visit — target > 80%",
   },
-  dashboard: {
-    eyebrow: "Preview",
-    title: "Subscriber Dashboard",
-    subtitle: "Visualize your real consumption against what you are being billed.",
-    topbar: "FactureChain — Dashboard",
-    subscriber: "Subscriber #237-00412",
-    chart_title: "Consumption vs Billing (kWh)",
-    legend_real: "Real consumption",
-    legend_billed: "Billed amount",
-    report: "Report an anomaly",
-    history: "Recent history",
-    gap: "⚠ Gap",
-  },
   sdg: {
     eyebrow: "Our Impact",
     title: "Aligned with the Sustainable Development Goals",
@@ -133,6 +117,6 @@ export const en = {
     user2: "Consumer associations",
     user3: "SMEs & Businesses",
     rights: "© 2026 FactureChain. All rights reserved.",
-    badge: "🏆 Miabe Hackathon 2026 — Darollo Technologies Corporation",
+    badge: "Miabe Hackathon 2026 — Darollo Technologies Corporation",
   },
 };

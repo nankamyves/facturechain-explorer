@@ -21,7 +21,7 @@ const FooterSection = () => {
               <li><a href="#solution" className="hover:text-primary transition-colors">{t("nav.solution")}</a></li>
               <li><a href="#probleme" className="hover:text-primary transition-colors">{t("nav.problem")}</a></li>
               <li><a href="#blockchain" className="hover:text-primary transition-colors">{t("nav.blockchain")}</a></li>
-              <li><a href="#dashboard" className="hover:text-primary transition-colors">{t("nav.dashboard")}</a></li>
+              <li><a href="#odd" className="hover:text-primary transition-colors">{t("nav.sdg")}</a></li>
             </ul>
           </div>
 

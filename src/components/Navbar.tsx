@@ -13,7 +13,6 @@ const Navbar = () => {
     { href: "#probleme", label: t("nav.problem") },
     { href: "#solution", label: t("nav.solution") },
     { href: "#blockchain", label: t("nav.blockchain") },
-    { href: "#dashboard", label: t("nav.dashboard") },
     { href: "#odd", label: t("nav.sdg") },
   ];
 
@@ -28,7 +27,11 @@ const Navbar = () => {
         {/* Desktop / Tablet */}
         <div className="hidden md:flex items-center gap-4 lg:gap-6">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">
+            <a
+              key={l.href}
+              href={l.href}
+              className="relative text-sm font-medium text-foreground/80 hover:text-primary transition-colors whitespace-nowrap after:absolute after:left-0 after:-bottom-1.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
+            >
               {l.label}
             </a>
           ))}
@@ -54,7 +57,7 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
           >
             {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-sm font-medium text-muted-foreground hover:text-foreground">
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
                 {l.label}
               </a>
             ))}

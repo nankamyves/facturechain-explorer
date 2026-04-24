@@ -61,9 +61,6 @@ const HeroSection = () => {
           <a href="#solution" className="rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5">
             {t("hero.cta_primary")}
           </a>
-          <a href="#dashboard" className="rounded-lg bg-secondary px-8 py-3.5 text-base font-semibold text-secondary-foreground shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5">
-            {t("hero.cta_secondary")}
-          </a>
         </motion.div>
       </div>
 
