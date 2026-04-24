@@ -12,6 +12,7 @@ const Navbar = () => {
   const links = [
     { href: "#probleme", label: t("nav.problem") },
     { href: "#solution", label: t("nav.solution") },
+    { href: "#blockchain", label: t("nav.blockchain") },
     { href: "#dashboard", label: t("nav.dashboard") },
     { href: "#odd", label: t("nav.sdg") },
   ];
@@ -31,9 +32,6 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#solution" className="hidden lg:inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5">
-            {t("nav.cta")}
-          </a>
           <LanguageSwitcher />
         </div>
 
